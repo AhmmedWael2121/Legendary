@@ -16,9 +16,7 @@ export class Games {
     this.display = new Ui();
     this.detailsGames = new Details();
     this.getGames("mmorpg");
-    document
-      .querySelector("input[type=search]")
-      .addEventListener("input", (e) => this.searchGames(e));
+    document.querySelector("input[type=search]").addEventListener("input", (e) => this.searchGames(e));
   }
 
   async changeActivelink(link) {
@@ -49,7 +47,7 @@ export class Games {
     this.allGames = response; // Update allGames array with new data
 
     document.querySelectorAll(".card").forEach((card) => {
-      card.addEventListener("click", async () => {
+      card.addEventListener("click" , async () => {
         this.games.classList.add("d-none");
         this.details.classList.remove("d-none");
         this.navs.classList.add("d-none");
@@ -59,19 +57,30 @@ export class Games {
     });
   }
   searchGames(e) {
-      const searchTerm = e.target.value.toLowerCase(); // Get search input value
-      const filteredGames = this.allGames.filter(
-        (game) => game.title.toLowerCase().includes(searchTerm) // Filter games by title
-      );
-      if (filteredGames.length > 0) {
-        // Display matching games
-        this.display.displaygame(filteredGames);
-      } else {
-        // Display "Not Found" message
-        document.getElementById("rowData").innerHTML = `
-          <div class="col-12 text-center text-white">
-            <h3 class="m-auto">No games found for "${e.target.value}".</h3>
-          </div>`;
-      }
+    const searchTerm = e.target.value.trim().toLowerCase();
+    const filteredGames = this.allGames.filter(
+      (game) => game.title.toLowerCase().includes(searchTerm)
+    );
+    if (filteredGames.length > 0) {
+      this.display.displaygame(filteredGames);
+      this.attachCardListeners(); // Reattach event listeners to the new cards
+    } else {
+      document.getElementById("rowData").innerHTML = `
+        <div class="col-12 text-center text-white">
+          <h3 class="m-auto">No games found for "${e.target.value}".</h3>
+        </div>`;
     }
+  }
+  
+  attachCardListeners() {
+    document.querySelectorAll(".card").forEach((card) => {
+      card.addEventListener("click", async () => {
+        this.games.classList.add("d-none");
+        this.details.classList.remove("d-none");
+        this.navs.classList.add("d-none");
+        this.detailsGames.getDetails();
+        await this.detailsGames.fetchDetails(card.dataset.id);
+      });
+    });
+  }
 }

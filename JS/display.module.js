@@ -38,7 +38,8 @@ export class Ui {
     document.getElementById("rowData").innerHTML = gameContainer;
   }
   displayDetailgames(data) {
-    let detailContainer = `<div class="col-md-4">
+    let detailContainer = ``;
+    detailContainer += `<div class="col-md-4">
               <img src="${data.thumbnail}" class="w-100 m-auto shadow rounded-4" alt="{ID img}"
               />
             </div>
