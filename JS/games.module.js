@@ -51,6 +51,7 @@ export class Games {
         this.games.classList.add("d-none");
         this.details.classList.remove("d-none");
         this.navs.classList.add("d-none");
+      document.getElementById("searchId").classList.add("d-none");
         this.detailsGames.getDetails();
         await this.detailsGames.fetchDetails(card.dataset.id);
       });
@@ -78,6 +79,8 @@ export class Games {
         this.games.classList.add("d-none");
         this.details.classList.remove("d-none");
         this.navs.classList.add("d-none");
+      document.getElementById("searchId").classList.add("d-none");
+
         this.detailsGames.getDetails();
         await this.detailsGames.fetchDetails(card.dataset.id);
       });

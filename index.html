@@ -60,12 +60,8 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-     
-        
-        
-        <div class="collapse small navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+        <div class="collapse small navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-1 mb-lg-0 menu small">
-
             <li class="nav-item">
               <a
                 role="button"
@@ -114,15 +110,18 @@
                 >pixel</a
               >
             </li>
-              <input class="form-control m-auto  ms-2 rounded-4" type="search" placeholder="Search" aria-label="Search" id="navbarSupportedContent">
           </ul>
         </div>
       </div>
     </nav>
     <main class="my-5">
+      <div class="layer mb-5 m-auto d-flex justify-content-center align-items-center">
+        <input  id="searchId" class="form-control w-50 w-xl-25 rounded-4 me-1" type="search" placeholder="Search" aria-label="Search">
+      </div>
       <section class="games" id="games">
         <div class="container">
-          <div class="row gap-4 my-auto" id="rowData"></div>
+          
+          <div class="row gap-4 m-auto" id="rowData"></div>
         </div>
       </section>
     </main>
@@ -172,7 +171,7 @@
       </div>
     </footer>
     <script src="JS/all.min.js"></script>
-    <script src="JS/bootstrap.js"></script>
+    <script src="./JS/bootstrap.js"></script>
     <script src="JS/index.js" type="module"></script>
   </body>
 </html>

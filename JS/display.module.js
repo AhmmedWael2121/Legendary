@@ -9,7 +9,7 @@ export class Ui {
       <div class="col">
           <div data-id="${
             data[index].id
-          }" class="card bg-transparent" style="width: 18rem;" role="button">
+          }" class="card bg-transparent m-auto" style="width: 18rem;" role="button">
                    <img class="card-img-top" src="${data[index].thumbnail}" />
                    <div class="card-body">
                       <div class="mb-3 d-flex align-items-center justify-content-between">

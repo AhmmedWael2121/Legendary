@@ -9,6 +9,7 @@ export class Details {
       document.getElementById("games").classList.remove("d-none");
       document.getElementById("details").classList.add("d-none");
       document.querySelector(".navbar").classList.remove("d-none");
+      document.getElementById("searchId").classList.remove("d-none");
     });
   }
   async fetchDetails(id) {
