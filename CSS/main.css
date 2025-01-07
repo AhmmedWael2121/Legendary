@@ -1,0 +1,148 @@
+/* ********** Global Styles ********** */
+:root {
+  --title-fnt: "Nerko One",serif;
+  --title-sec-fnt:"Comfortaa", serif;
+  --min-clr:#2A2E33;
+  --min-hover-clr:rgba(31, 73, 125, 0.84);
+  --text-clr: #fff4f4;
+  --bg-main: #272b30c1;
+  --bg-btns: #3A497B;
+  --bg-details-btns:#198754;
+  --nav-clr:#3A497B;
+  --clr-card : #1c3b69;
+
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  background-color: var(--min-clr);
+  background-position: center center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../Images/secret-level-3840x2160-20261.jpg) !important;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  
+}
+
+.fnt-title {
+  font-family: var(--title-fnt) !important;
+}
+.fnt-sec-title {
+  font-family: var(--title-sec-fnt);
+}
+.text-color {
+  /* Sd */
+  color:var(--text-clr);
+}
+ .bg-btn-secondary {
+  background-color: var(--bg-details-btns);
+}
+.bg-sec-color {
+  background-color: var(--bg-sec-clr) !important;
+}
+.nav-clr {
+  background-color: var(--nav-clr) !important;
+}
+.btn-color {
+  background-color: var(--btn-clr);
+}
+.row {
+  --bs-gutter-x: 0rem !important; 
+   --bs-gutter-y: 0rem !important;
+}
+/** ---------------- NAv styling start-------------------*/
+.hdr img {
+    max-height: 30vh;
+    object-fit: cover;
+
+  }
+  .nav-link{
+    transition: color .15s ease-in-out;
+  }
+.nav-item:hover .nav-link {
+  color: blueviolet !important;
+}
+.active {
+  color: blueviolet !important;
+}
+/** ---------------- NAv styling End-------------------*/
+
+/** ---------------- main styling start-------------------*/
+
+.card {
+  filter: grayscale(0.5);
+  transition: transform 0.5s, filter 0.5s, padding 0.5s;
+  background-color:    rgba(22, 23, 27, 0.7) !important;
+
+}
+.bg-transparent {
+  --bs-bg-opacity: 1;
+  background-color: rgba(22, 23, 27, 0.7) !important;
+}
+.bg-transparent-details {
+  --bs-bg-opacity: 1;
+  background-color: rgba(22, 23, 27, 0.9) !important;
+}
+.card:hover {
+  transform: scale(1.05);
+  filter: grayscale(0);
+  background-color: var(--min-hover-clr) !important;
+  opacity: 1;
+  color: white !important;
+  padding: 0% !important;
+}
+.span-txt{
+  font-size: .6rem !important;
+}
+span.btn-success{
+  font-size: .8rem !important;
+}
+.card-header{
+  padding:  .5rem !important ;
+  border-bottom: none !important;
+
+}
+.card-body{
+  padding: 1rem 0.3rem !important ;
+}.card-footer{
+  padding: 1rem 0.3rem !important ;
+}
+/** ---------------- main styling End-------------------*/
+
+/** ---------------- footer styling start-------------------*/
+input{
+  border: none !important;
+  overflow: hidden !important;
+  outline: none !important;
+
+}
+/** ---------------- footer styling End-------------------*/
+
+.showGm{
+  border: solid rgb(33, 41, 145) 1px !important;
+  transition: background-color  0.5s ,border 0.5s !important ;
+}
+.showGm:hover{
+  background-color: rgb(33, 41, 145)  !important;
+  border: none !important;
+}
+
+
+.g_pf{
+  font-size: 0.55rem !important;
+}
+.g_pp{
+  font-size: 1rem !important;
+}
+#details-title{
+  font-size: 3rem !important;
+}

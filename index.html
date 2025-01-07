@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="Images/flag.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Orbitron:wght@400..900&family=Spicy+Rice&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="CSS/loading.css" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.css" />
+    <link rel="stylesheet" href="CSS/main.css" />
+    <title>Legendary</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg p-2 nav-clr rounded-4 m-auto position-sticky top-0 col-md-6 col-lg-9 z-3"
+    >
+      <div class="container">
+        <h1 class="navbar-brand mb-0 fs-5 text-uppercase text-white">
+          <img
+            src="./Images/logo-sm.png"
+            alt="logo photo"
+            style="max-width: 40px"
+          />
+          Game Reviews
+        </h1>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+     
+        
+        
+        <div class="collapse small navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-1 mb-lg-0 menu small">
+
+            <li class="nav-item">
+              <a
+                role="button"
+                class="nav-link text-uppercase active text-white"
+                data-category="MMORPG"
+                >mmorpg</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                role="button"
+                class="nav-link text-white text-uppercase"
+                data-category="Shooter"
+                >shooter</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                role="button"
+                class="nav-link text-white text-uppercase"
+                data-category="sailing"
+                >sailing</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                role="button"
+                class="nav-link text-white text-uppercase"
+                data-category="permadeath"
+                >permadeath</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                role="button"
+                class="nav-link text-white text-uppercase"
+                data-category="superhero"
+                >superhero</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                role="button"
+                class="nav-link text-white text-uppercase"
+                data-category="pixel"
+                >pixel</a
+              >
+            </li>
+              <input class="form-control m-auto  ms-2 rounded-4" type="search" placeholder="Search" aria-label="Search" id="navbarSupportedContent">
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="my-5">
+      <section class="games" id="games">
+        <div class="container">
+          <div class="row gap-4 my-auto" id="rowData"></div>
+        </div>
+      </section>
+    </main>
+    <section
+      id="details"
+      class="details bg-transparent-details  vh-25 d-none my-5 m-auto"
+    >
+      <div class="container-fluid px-4">
+        <header class="d-flex justify-content-between align-items-center my-5">
+          <h2 class="text-danger fw-bold  py-2">Game Details</h2>
+          <button class="btn-close btn-close-white"></button>
+        </header>
+        <div
+          id="detailRow"
+          class="row d-flex justify-content-between align-items-center "
+        ></div>
+      </div>
+    </section>
+
+    <div id="loading" class="loading d-none">
+      <span class="loader"></span>
+    </div>
+    <footer class="py-1 nav-clr position-sticky left-0 right-0 button-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 m-auto">
+            <div
+              class="subscribe-form rounded rounded-pill d-flex col-md-8 justify-content-center m-auto align-items-center"
+            >
+              <input
+                class="bg-dark text-white shadow-lg p-2 w-100 rounded rounded-pill"
+                type="text"
+                placeholder="Enter your email to subscribe..."
+              />
+              <button
+                class="m-1 btn btn-success rounded rounded-pill text-white fw-normal p-2"
+                type="submit"
+              >
+                Subscribe
+              </button>
+            </div>
+            <p class="text-white text-center">
+              &copy; 2024 Designed by Ahmed Wael. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="JS/all.min.js"></script>
+    <script src="JS/bootstrap.js"></script>
+    <script src="JS/index.js" type="module"></script>
+  </body>
+</html>
